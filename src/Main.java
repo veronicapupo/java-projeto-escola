@@ -1,4 +1,3 @@
-import javax.swing.*;
 import java.util.*;
 // Criar Função
 //uma função pode possuir retorno ou não
@@ -38,7 +37,6 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Inicio do programa");
         menu();
-
     }
 
 
@@ -49,7 +47,6 @@ public class Main {
         cursos.add("Veterinaria");
         System.out.println(cursos);
         return cursos;
-
     }
 
     static void imprimirNomeIdade(String nome, int idade) {
