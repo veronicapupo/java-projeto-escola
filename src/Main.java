@@ -1,4 +1,3 @@
-import javax.swing.*;
 import java.util.*;
 // Criar Função
 //uma função pode possuir retorno ou não
@@ -16,6 +15,7 @@ public class Main {
         System.out.println("SELECIONE UMA DAS OPÇÕES");
         System.out.println("(1) - CADASTRAR ALUNO");
         System.out.println("(2) - LISTAR CURSOS DISPONIVEIS");
+        System.out.println("(3) - REALIZAR MATRICULA");
         System.out.println("(0) - SAIR DO PROGRAMA");
         Scanner scanner = new Scanner(System.in);
 
@@ -27,8 +27,16 @@ public class Main {
             case 2 -> {
                 listaCursosDisponiveis();
                 menu();
-            }
+
+
+            } case 3 -> {
+                imprimirCurso(curso());
+                imprimirPeriodo(periodo());
+                menu();
+
+                            }
             case 0 -> {
+
                 break;
             }
         }
@@ -38,7 +46,6 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Inicio do programa");
         menu();
-
     }
 
 
@@ -49,11 +56,18 @@ public class Main {
         cursos.add("Veterinaria");
         System.out.println(cursos);
         return cursos;
-
     }
 
     static void imprimirNomeIdade(String nome, int idade) {
         System.out.println("Nome = " + nome + " " + "Idade = " + idade);
+
+    }
+    static void imprimirPeriodo(String periodo) {
+        System.out.println("Período = " + periodo);
+    }
+
+    static void imprimirCurso(String curso) {
+        System.out.println("Curso = " + curso);
     }
 
     static String perguntaNome() {
@@ -68,5 +82,14 @@ public class Main {
         return scanner.nextInt();
     }
 
+    static String periodo() {
+        System.out.println("Qual período?");
+        Scanner scanner = new Scanner(System.in);
+        return scanner.next();
+    }
+    static String curso() {
+            System.out.println("Qual curso gostaria de se matricular? ");
+            Scanner scanner = new Scanner(System.in);
+            return scanner.next();
+        }
 }
-
